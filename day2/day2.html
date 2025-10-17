@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+    how to insert js to the html doc
+
+    1 internal -
+
+    <script></script> tag - within the script - logic
+    at the bottom of the html doc-- before closing the body
+         
+    console.log('hello js')
+    // open with live server ---inspect ctrl - shft j ---console
+
+    2 external -embed the another document with .js extension
+    and we can link using script tag
+
+    demo.js
+    <script src='demo.js'> </script>
+
+    3 inline-
+    <button onclick='alert('welcome to our website')'>click me</button>
+
+    variables 
+    variables are the containers for storing data and 
+    that data could be anything
+    
+    variables are defined using var, let , const keywords followed
+    by idenitifier (variabl name ), we can assign data using = opearato
+    
+    var a=10
+    let b="hello world"
+    const c= 20
+    d=3
+
+    variable conventions
+    
+    variable declaration - it is process of defining the  varaible in the environment
+    var a;
+
+    undefined - a variable without an value 
+    not defined - an unexisting variable
+
+    assignment -  it a process of assiging a value after the declaration
+    var a;
+    a=30;
+
+    re assignment
+    var a;
+    a=20;
+    a=30;
+
+    initialization- it process of assigning a value at the time 
+    of declaration
+    var a=10
+
+   * hoisting - it is a behaviour where the declaration of an variables
+    and functions are moved to top even before the execution
+
+    console.log(a)
+    var a
+    console.log(b)
+    var b=10
+
+    data types
+    1- primitve data types
+       stores single values
+       stored in stack
+       pass by value and get by value
+
+       1. string - it is a collection of characters that are enclosed in
+                  single or double quotes
+         var a='hello world'
+         console.log(a)
+         console.log(a[0])
+        
+        2. number -  postive or negative or decimal
+        var a=10.6
+        console.log(a)
+        console.log(typeof a) ---it will check the datatype of an var
+        
+        3. boolean - true or false
+                      all num or 0
+        4. null - it is intensional absence of an value
+        5. undefined 
+
+        symbol
+        bigint
+
+    2 - non primitive data types
+       stores multiple values
+       stores in heap
+       pass by reference and get by reference
+
+       array - it a collection of homogenous or hetregenous value 
+       and that can be accessed by numbered indexing
+       var arr=[1, "hello", true]
+       console.log(arr)
+       console.log(arr[0])
+
+       var data=[1,2,23]
+
+       object - it is used to store the data in key value pairs
+       we can access by keys (named index)
+       var obj={
+       name:'john',
+       id:1,
+       age:23,
+       batch: 1
+       }
+       console.log(obj)
+       console.log(obj.id)
+       console.log(obj['age'])
+
+       functions -
+       it is a block of reusable code that is used to perform one action
+
+       function greet(){
+       console.log('hello world')
+       }
+       greet()
+
+  built in data types
+       date
+       map 
+       set
+
+   
+
+    -->
+   <script>
+     function greet(){
+       console.log('hello world')
+       }
+       greet()
+       greet()
+       greet()
+       greet()
+    //single line comments
+    /*multi
+    line
+    comment
+    */
+        var a=null;
+       console.log(a+2)
+       
+
+   </script> 
+</body>
+</html>
