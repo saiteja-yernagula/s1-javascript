@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        conditional statemens
+        switch case
+        for loop
+
+        for (initia;cond;up){
+        code 
+        }
+
+        for (var i=10 ; i>=0;i--){
+        console.log(i)
+        }
+
+
+        for (var i =1;i<=10;i++){
+            i=i*2
+            }
+            console.log(i)
+
+            for (var  i =1;i<i*2;i++){
+    console.log(i)
+}
+        ivalue      condtion      output      updation
+        1             t           c=0+1*2 2     2
+        2             t             2+2*2=6     3
+        3            t              6+3*2=12     4
+        4           t               12+8=20      5
+        5          t                 20+10=30    6
+        6        f
+
+     count=0;
+for(i=1;i<=5;i++){
+count=count+(i*2)
+}
+
+console.log(count)
+
+
+sum=0
+osum=0
+for (i=1;i<=10;i++){
+if (i%2==0){
+    sum+=i
+}else{
+osum+=i}
+
+}
+console.log(sum,osum)
+
+break and continue
+
+break
+it is used to terminate the current loop
+for (i=0;i<10;i++){
+    console.log(i)
+    if (i==5){
+        break;
+    }
+}
+continue 
+it is used to skip the current iteration
+and moves the control to next iteration
+for (i=0;i<10;i++){
+    if (i==5){
+        continue;
+    }
+    console.log(i)
+}
+
+
+
+
+for (var i=1;i<=5;i++){
+    console.log(i,'outer loop')
+    for (var j=1;j<=10;j++){
+        console.log(j,'innner loop')
+        if(j==5){
+            break
+        }
+        
+    }
+}
+
+
+for (i=1;i<=5;i++){
+    for (j=1;j<=10;j++){
+    console.log(i,"*",j,"=",i*j)
+}
+}
+
+
+while loop
+it is used to execute a block of code until the conditon
+is true
+it is mostly used when the iteration are not known
+it is event controlled loop
+
+syntax
+initialization
+
+while(condtion){
+//block of code
+
+updation
+}
+
+
+while (true){
+    answer=prompt('say ur answer')
+    if (answer=='yes'){
+        break
+    }
+    console.log('proposed')
+}
+
+
+while (true){
+    items=prompt('enter ur order items-enter done to exit ')
+
+    if (items=='done'){
+        break
+    }
+    console.log(items)
+}
+
+
+do while loop
+it is also like while loop
+but it will always execute block of code at one time
+even the condition is false
+
+syntax
+initialization
+do{
+//block of code
+updation}
+while(condition)
+
+
+var i=0
+do {
+    console.log(i)
+    i++
+}
+while(i>10)
+
+for in loop
+it is used to iterate the 
+keys and index of string, arrays and objects
+str='hello world'
+for(i in str){
+console.log(i)...indexes
+console.log(str[i])...characters
+}
+
+arr=['html','css','js']
+for(i in arr){
+console.log(i)...indexes
+console.log(arr[i])...items
+}
+
+obj={
+name:'john',
+age:25}
+
+for(i in =obj){
+console.log(i)...indexes
+console.log(obj[i])...items
+}
+
+
+
+
+for of loop
+it is used iterate the items and characters in string
+and array
+str='hello'  arr=['html','css','js']
+for (i of str){
+console.log(i)
+}
+
+
+        
+obj={
+name:'john',
+age:25
+    
+}
+
+for(i of Object.values(obj)){
+console.log(i)
+}
+
+for(i of Object.keys(obj)){
+console.log(i)
+}
+
+for([i,j] of Object.entries(obj)){
+console.log(i,j)
+}
+
+
+
+data=[
+    {
+        productcode:12,
+        status:'expired'
+    },
+    {
+        productcode:1,
+        status:'not expired'
+    },
+    {
+        productcode:132,
+        status:' not expired'
+    },
+    {
+        productcode:142,
+        status:'expired'
+    },
+    ]
+    
+    
+    for( i of data){
+        if(i.status=="expired"){
+            continue
+        }
+        console.log(i)
+    }
+
+
+
+
+password='1234'
+attempt=0
+while (true){
+    inp=prompt('enter ur password')
+    if (inp==password){
+        console.log('granted')
+        break
+    }
+    else{
+        attempt++
+        if(attempt==3){
+            console.log('card is blocked till next 24hours')
+            break
+        }
+        
+    }
+    
+}
+        */
+    </script>
+</body>
+</html>
