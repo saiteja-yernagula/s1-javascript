@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        functions
+        it is a piece of reusable block of code that is used to 
+        perform specific task when something invokes it
+
+        function is defined with function keyword follewed by function
+        name followed by parenthisis followed by block of code{}
+
+        syntax:
+        function declaration or definition
+        function funname(paremeters){
+        //statements
+        //statements
+        //statements
+        }
+
+        invoking 
+        funname(arguments)
+
+        paranthesis in the declaration may contain parameters .
+          ''         ""      function calling    '    'arguments are the values 
+        inside the function parameters and argumen behaves like local
+        variabes
+
+        keypoints in functions
+        1. function name stores function definition
+        2. consoling the funciton calling prints return value
+        3. statements after return will not execute -it was in void
+        4. named functions can only be hoisted
+        5. in js functions are first class functions means
+        it can assigned to variable as a values , passed as an argument
+
+
+ types of functions
+ named function
+ anonymous function - a function that is defined without a name
+                      function (){
+                      //code
+                      }
+arrow function- it is a more concise way of writing a funciton with 
+               simple syntax
+                     ()=>{
+                      //code
+                      }
+               var a =(num1,num2)=>{
+               console.log(num1 +num2)
+               return num1+num2
+               }
+               a(1,2)
+               a(3,4)
+
+               var a =num1=>console.log(num1 +num1)
+
+iife (immediate invoking function expression)- self invoking functin
+when a function is invoked as soon as it is defined
+
+(function declaration)()
+
+(function (){
+console.log('hello world')
+})()
+
+callback function- 
+when a function declaration is passed to another function as 
+an argument and later will execute in the outer funciton 
+
+function outer(a){
+a()
+console.log('outer')
+}
+function inner(){
+console.log("inner")
+}
+
+outer(inner)
+
+when a fucntion takes one or more functions as an arguments 
+it is called higher order function
+3
+
+hof(callback,callback2,callback3)
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        */
+function payment(b){
+    console.log('payment completed')
+    b()//when a function defintion is passed to another function as argm
+    //and later execute in the outer funciton - 
+    // to handle asynchronous and sequential functin execution
+}
+function cart(a){
+    console.log('products are added to the cart')
+    a(order)}
+function order(){
+    console.log('order placed')
+}
+cart(payment)
+//        function outer(a){
+//            console.log('outer')
+//            a()
+// }
+// function inner(){
+// console.log("inner")
+// }
+
+// outer(inner)
+
+//         (function (){
+// console.log('hello world')
+// })()
+
+        function funname(){
+            console.log('hello world')
+        }
+        // funname()
+       
+        function sum(a,b){
+            console.log(a+b)
+        }
+
+        // sum(2,3)
+
+        // sum(3,4)
+        // sum(8,9)
+        function btn(n){
+            console.log(n, 'is clicked')
+        }
+
+        // btn(1)
+        // btn('+')
+        // btn()
+
+        // greet()
+
+       
+
+        var a= function (name='dear'){
+            console.log('hello',name,'welcome to our webpage')
+            return name
+
+        }
+    //    a()
+
+        
+        // function sum(){
+        //     return 3+3
+        // }
+
+        // function mul(){
+        //     return 3*3
+        // }
+
+        // console.log(sum()+mul())
+   
+
+               var a =num1=>console.log(num1 +num1)
+               
+        
+               a(3,4)
+
+        
+
+
+    </script>
+    
+</body>
+</html>
