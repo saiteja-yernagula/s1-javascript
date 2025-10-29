@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        scopes -
+        global ,block and local
+
+        differences
+        var , let and const
+
+        scope chaining
+when a variable is declared and loged it will look into current scope
+        if not found then it will look into the outer scope
+        if not found then it will loop upto the global
+        if not found it will throw error
+       let a=10
+       function hello(){
+        // let a=20
+        {
+            // let a=30
+            console.log(a)
+        }
+       }
+       hello()
+
+
+       closure
+       when a inner function can remember and can access
+       the variable of the outer function even after the
+       execution of the outer function
+
+
+        function outer(){
+        var count=0
+         function inner(){
+            count++
+            console.log(count)
+        }
+        return inner
+    }
+    var a=outer()
+    a()
+    a()
+
+
+    global execution context
+
+
+
+
+
+
+
+        
+        */
+    //    let a=10
+    //    function hello(){
+    //     // let a=20
+    //     {
+    //         // let a=30
+    //         console.log(a)
+    //     }
+    //    }
+    //    hello()
+
+debugger;
+   
+    // outer()()...1
+    // outer()()...1
+
+    var a=10
+    let b=20
+    const c=30
+
+
+    function hello(){
+        let d=40
+        console.log('hello world')
+    }
+    hello()
+
+    </script>
+</body>
+</html>
