@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 >heading 1</h1>
+    <h1>heading 2</h1>
+    <h1>heading 3</h1>
+
+    <div>conten1</div>
+    <p class="container">content 2</p>
+    <div class="container">conten3</div>
+    <div id='demo'>content by id</div>
+
+    <script>
+        /*
+        scope chaining
+        closures
+        gec
+
+        dom-document object model
+        it is a standard object model that allows scripts and programs
+        to modfiy the content,style and structure
+        it connects scripts to the webpages
+        dom takes document as a tree like structure
+        dom has methods for accessing and properties for manipulating
+
+        two types of objects
+        1. document level objects
+        2. element level objects
+
+        methods for accessing
+        1. based on tagnames
+        var h= document.getElementsByTagName('tagname')- which comes in
+             collection can accessed by indexing 
+       console.log(document.getElementsByTagName('div'))--whole collection
+       console.log(document.getElementsByTagName('h1')[0])--first element
+       console.log(document.getElementsByTagName('h1')[1])--second element
+       console.log(document.getElementsByTagName('h1')[2])
+
+       2.based on classname
+      var el=document.getElementsByClassName('container');
+ which comes in collection and can be accesed by indexing
+
+   var el=document.getElementsByClassName('container')
+       console.log(el)//collection of class elements
+       console.log(el[0])//first element
+
+       <div class='container'>content</div>
+
+    3) based on id 
+    it is used to get element uniquely and returns 
+    that single unique element
+    var el=document.getElementById('demo')
+    console.log(el)
+
+    <div id='demo'>content by id</div>
+
+    4) query selector - it is used to get the reference 
+    of id ,class and tagname it will return only the 
+    first precedence
+    var el =document.querySelector('h1')
+    console.log(el)//first h1 element
+    var el =document.querySelector('.container')
+    console.log(el)//first  element with that classname
+
+    var el =document.querySelector('#demo')
+    console.log(el)//first  element with that id
+
+ 5. querySelectorAll
+ it is used to get the references of an class or id or tag
+ and it always comes in collection
+
+var el=document.querySelectorAll('div')
+var el=document.querySelectorAll('.container')
+var el=document.querySelectorAll('#demo')
+
+
+how to  access content
+method.property
+
+method.innerText
+method.innerHTML
+method.textContent
+
+how to get the element and content with class 
+var el=document.getElementsByClassName('container')
+console.log(el[0].innerText)
+
+var el=document.getElementById('demo')
+console.log(el.innerText)
+
+how to modify the content
+var el=document.getElementById('demo')
+el.innerText='hello js'
+
+var el=document.getElementsByClassName('container')
+el[0].innerHTML='<b>hello world</b>'
+        
+        */
+
+
+
+    // var el =document.querySelectorAll('h1')
+    // console.log(el)//first h1 element
+    // var el =document.querySelectorAll('.container')
+    // console.log(el)//first  element with that classname
+    
+    // var el =document.querySelectorAll('#demo')
+    // console.log(el)//first  element with that id
+
+    </script>
+    
+</body>
+</html>
