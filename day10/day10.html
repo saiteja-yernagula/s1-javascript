@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li {
+            display: inline;
+        }
+
+        #demo1 {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+        }
+
+        #demo2 {
+            background-color: rgb(230, 33, 230);
+            color: white;
+            padding: 20px;
+            font-family: sans-serif;
+
+
+        }
+
+        #demo3 {
+            background-color: rgb(205, 200, 103);
+            color: black;
+            padding: 20px;
+            font-family: cursive;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="darklight()">toggle</button>
+
+    <div class="container">
+        <div>
+            <h1>branding</h1>
+        </div>
+
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+
+    <button onclick="fun('demo1')">theme1</button>
+    <button onclick="fun('demo2')">theme2</button>
+    <button onclick="fun('demo3')">theme3</button>
+
+    <!--     
+   <h1>hello world</h1>
+   <button onclick="fun()">click</button>
+
+    <h1>hello world</h1>
+   <button onclick="fun()">click</button>
+
+    <h1>hello world</h1>
+   <button onclick="fun()">click</button> -->
+
+    <script>
+        /*
+        dom
+        scripts and programs to modify conte,style,struct
+
+        methods -accesing
+        properties- manipulating
+
+        types of obj
+        doc
+        ele
+
+
+        methods
+        getElementsByTagName
+        getElementsByClassName
+        getElementById
+        querySelector
+        querySelectorAll
+
+        how to access content
+
+        innerText
+        innerHTML
+        textContent
+
+        how to modify
+        method.innerText="hello world"
+        method.innerHTML= "<u>hello world</u>"
+
+
+        how to add styling
+        method.style.property='value'
+
+        var el=document.getElementsByTagName('div')
+        el[0].style.backgroundColor='blue';
+
+        how to set an attribute
+        method.setAttribute('property','value')
+        var el=document.getElementsByTagName('div')
+        el[1].setAttribute('class','demo')
+
+
+
+
+
+    
+
+        
+        */
+        // var el=document.getElementsByTagName('div')
+        // el[1].setAttribute('class','demo')
+
+
+
+        // var n=prompt('ente a num')
+        // var m=prompt('enter a text')
+        // function fun(){
+        //     var el=document.querySelectorAll('h1')
+        //     el[n].innerText=m
+        // }
+
+        // function fun(n){
+        //     var el=document.querySelector('.container')
+        //     el.setAttribute('id',n)
+        //     console.log(el)
+        // }
+
+        var flag = true
+
+        function darklight() {
+            var el = document.querySelector('body')
+            var btn = document.querySelector('button')
+            if (flag) {
+                el.style.background = 'black'
+                el.style.color = 'white'
+                btn.innerText = 'click to apply light theme'
+                flag = false
+            }
+            else {
+                el.style.background = 'white'
+                el.style.color = 'black'
+                btn.innerText = 'click to apply dark theme'
+                flag = true
+            }
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
