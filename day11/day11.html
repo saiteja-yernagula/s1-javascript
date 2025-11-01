@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="createcard()">click to add</button>
+
+    <ul>
+
+    </ul>
+
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        /*
+        dom
+        how to add styles
+        how to set an attribute
+
+        document level objects
+        document.body- it returns the body element
+        document.title- it returns the title content
+        document.scripts-it returns script element in a collection
+        document.links-it returns all anchor tags in a collection
+        document.forms- it returns all form elements in a collection
+
+
+
+
+
+
+        how to create a new element
+        document.createElement('tagname')
+
+        var el=document.createElement('h1')
+        el.innerText='content added from dom'
+        console.log(el)
+
+        how to add an element
+        document.body.append(el)
+
+         <ul>
+    <li>content1</li>
+    <li>content2</li>
+    <li>content3</li>
+</ul>
+
+        
+        */
+        // <button onclick="bgchange()">click to change</button>
+
+        //     let colors=['red','green','blue']
+        //     let count=0
+
+        //     function bgchange(){
+        //         document.body.style.background=colors[count]
+        //         count++
+        //         if(count==colors.length){
+        //             count=0
+        //         }
+        //     }
+        //   <ul>
+        //     <li>content1</li>
+        //     <li>content2</li>
+        //     <li>content3</li>
+        //    </ul>
+        // var ul=document.createElement('ul')
+        // var li1=document.createElement('li')
+        // var li2=document.createElement('li')
+        // var li3=document.createElement('li')
+
+        // li1.innerText='content1'
+        // li2.innerText='content2'
+        // li3.innerText='content3'
+
+        // ul.append(li1,li2,li3)
+
+        // function addlist(){
+        //     var inp=prompt('enter a list name')
+        //     var ul=document.querySelector('ul')
+        //     var liitem=document.createElement('li')
+        //     liitem.innerText=inp
+        //     ul.append(liitem)
+        // }
+          var main = document.getElementById('container')
+
+
+        var card=document.createElement('div')
+
+        var img1=document.createElement('img')
+        var price=document.createElement('div')
+        var title=document.createElement('div')
+        img1.setAttribute('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVFV_ihxipeZmqzxF_VUu2zkJUrxL7vgGidg&s')
+        price.innerText='10000'
+        title.innerText='html'
+        card.append(img1,title,price)
+        main.append(card)
+
+        console.log(card)
+        console.log(img1);
+        console.log(price);
+        console.log(title);
+        
+
+
+        var main = document.getElementById('container')
+        function createcard() {
+            var card = document.createElement('div')
+            var cardimg = document.createElement('img')
+            var title = document.createElement('h2')
+            var price = document.createElement('p')
+
+            cardimg.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVFV_ihxipeZmqzxF_VUu2zkJUrxL7vgGidg&s')
+            title.innerText = 'html'
+            price.innerText = '10k'
+
+            card.append(cardimg, title, price)
+            main.appendChild(card)
+            console.log(card)
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
