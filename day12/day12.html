@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .demo{
+            color:white;
+            background:blue;
+            padding:20px;
+        }
+        .demo1{
+            font-family: cursive;
+            font-size: 30px;
+        }
+        .m{
+            width:30px;
+            height: 8px;
+            background: black;
+            margin:8px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .dropdown{
+            
+            background: lightpink;
+            width:200px;
+            display: none;
+        }
+        .container2{
+            display: flex;
+         justify-content: flex-end;
+         position: absolute;
+         top:100px;
+         right:0;
+        }
+
+        .elhide{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>content is added</h1>
+    <button onclick="fun()">
+         <div>
+        <div class="m"></div>
+        <div class="m"></div>
+        <div class="m"></div>
+    </div>
+
+    </button>
+   
+</div>
+
+<div class="container2">
+
+    <div class="dropdown">
+        <div>home</div>
+        <div>about</div>
+        <div>services</div>
+    </div>
+    
+</div>
+    <button onclick="fun()">click to remove</button>
+    <button onclick="rem()">click to remove</button>
+
+
+    <script>     
+        /*`
+        dom-
+        how to create an element
+        
+        how to append
+
+        how to apply styles
+
+        how to remove an element
+
+function fun(){
+        var heading=document.querySelector("h1")
+        heading.remove()
+        heading.style.display='none'
+
+        var ul=document.querySelector('ul')
+        ul.removeChild(ul.firstElementChild)
+        ul.removeChild(ul.lastElementChild)
+       }
+
+
+       how to add and remove classes
+       method.classList.add('classname')
+        it is used to add classname to the element and that can
+        be multiple
+
+       method.classList.remove('classname')
+        it is used to remove the classname if exist
+
+       method.classList.toggle('classname')
+       it will add the class name if the classname is not exists
+       otherwise it will remove that classs
+        
+       var header=document.querySelector('h1')
+       function fun(){
+            
+            header.classList.add('demo')
+            header.classList.add('demo1')
+            header.setAttribute('class','el')
+            console.log(header)
+
+            // header.classList.toggle('demo')
+            // console.log(header)
+        }
+
+        function rem(){
+            header.classList.remove('demo')
+            console.log(header);
+        }
+
+
+
+        .dropdown{
+            display: none;
+        }
+        .elhide{
+            display: block;
+        }
+        
+        function fun(){
+            var el=document.querySelector('.dropdown')
+            el.classList.toggle('elhide')
+        }
+        
+        */ 
+        </script>
+
+    
+</body>
+</html>
