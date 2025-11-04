@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+      
+        
+        */
+// how to display the elements of an array using loop
+        // var arr=['html', 'css','javascript']
+        // var ul=document.createElement('ul')
+
+        // for (var i of arr){
+        //     var li=document.createElement('li')
+        //    li.innerText=i 
+        //     ul.append(li)
+          
+        // }
+        // document.body.append(ul)
+
+
+
+        var obj={
+            name:'john',
+            age:25,
+            city:'hyd'
+        }
+
+// how to display an object in a page using loops
+        var maindiv=document.createElement('div')
+
+        for (var i in obj){
+            var childdiv=document.createElement('div')
+            childdiv.innerText=i+ "-"+ obj[i]
+            maindiv.append(childdiv)
+        }
+        document.body.append(maindiv)
+
+    </script>
+    
+</body>
+</html>
