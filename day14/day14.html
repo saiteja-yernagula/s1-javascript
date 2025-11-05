@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    /*how to create cards using
+
+    api
+
+
+
+    fullstack
+
+    frontend- html css  js and react 
+
+    backend- apis structure ,crud operations, authentification
+            login and signup, authorization, data securtiy
+
+    api- application programming interface
+     that connect two applications to form communication
+     between them
+     it acts as a bridge
+
+
+      user ----browser ----frontend design request----
+      backend(processed)-----database
+      database-----backend(response)-----frontend
+
+      api calling
+      fetch('api url')- it is used to call an api
+      and it returns response as a promise
+
+      promise
+      it is a eventual completion or failure of
+      an asynchronous operation
+
+      how to consume a promise
+      1. .then .catch
+      2. async await
+
+      syntax
+      a=fetch('https://fakestoreapi.com/products/')
+       .then((val)=>val.json())
+       .then((data)=>console.log)
+       .catch((err)=>console.log("error found"))
+
+      json
+      it is common text format that is used in all the
+      applications
+      val.json()--this will convert the json data
+      into js objects
+
+
+      async and await
+
+      async function getdata(){
+      let req=await fetch('https://fakestoreapi.com/products/')
+      ler data=await req.json()
+      console.log(data)
+      
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    database
+    
+    
+    */ 
+
+
+
+// async will make function as asynchronous
+// await - it will stop the execution until the 
+// completion of that line
+//   async function getdata(){
+//       let req=await fetch('https://fakestoreapi.com/products/')
+//       let data=await req.json()
+//       console.log(data)
+//       }
+//       getdata()
+
+
+async function getweatherdata(){
+    let inp=prompt('enter a city')
+    let r=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inp}&units=metric&appid=466ddaa21a8de191e9f608bd11a56acb`)
+    let d=await r.json()
+    console.log(d.main)
+    var div=document.createElement('div')
+    div.innerText=`temp at ${inp} is ${d.main.temp} `
+    document.body.append(div)
+}
+getweatherdata()
+
+
+
+</script>
+</body>
+</html>
