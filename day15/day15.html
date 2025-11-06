@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="text"></div>
+    <script>
+        /*
+        Event handlers are functions in JavaScript 
+        that are responsible for handling specific
+         types of events. They define what should 
+         happen when a particular event occurs.
+
+         1) inline event handlers: it is directly
+         defined within the html using on followed by 
+         event name onClick='myfun()'
+         <button  onClick='myfun()'>click</button>
+
+         2) dom event handlers- in this event is added
+         using javascript using 
+         addEventListener('event','callback')
+
+         var btn=document.createElement('button')
+         btn.innerText='click'
+         btn.addEventListener("click","myfun()")
+
+         function myfun(){
+         alert('button is clicked')
+         }
+
+
+        
+        
+        */
+        var text = document.querySelector('.text')
+
+        var btn = document.createElement('button')
+        btn.innerText = 'click'
+        btn.addEventListener("click", myfun)
+
+        function myfun() {
+            text.innerText = 'button is clicked'
+        }
+
+
+        btn.addEventListener('dblclick', function () {
+            text.innerText = 'button is clicked two times'
+        })
+
+        btn.addEventListener('mouseover', function () {
+            document.body.style.background = 'navy'
+        })
+
+        btn.addEventListener('mouseout', function () {
+            document.body.style.background = 'lightblue'
+        })
+
+        btn.addEventListener('mousemove', function () {
+            alert('mouse moved over the elemnt')
+        })
+        document.body.append(btn)
+
+
+
+    </script>
+</body>
+
+</html>
