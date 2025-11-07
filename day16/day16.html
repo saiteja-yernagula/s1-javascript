@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+        <input type="text">
+        <button>add</button>
+
+
+        <div>
+
+        </div>
+    <script>
+        /*
+        types of events
+        event handlers
+
+        inline event handlers
+        dom event handlers
+
+        mouse events
+
+        how to access an input
+        1) field names
+        document.forms[0][0].value
+
+        var form = document.querySelector("form")
+        form.addEventListener("submit", fun)
+        function fun(e) {
+            e.preventDefault()
+            console.log(document.forms[0][0].value)
+            console.log(document.forms[0][1].value)
+        }
+         
+        e-it is an event that tracks information about everthing
+        e.preventDefault()- it is used to prevent default submision
+        of a form
+
+        2) using target
+
+        function fun(e) {
+            e.preventDefault()
+            console.log(e.target[0].value)
+            console.log(e.target[1].value)
+            
+        }
+
+        3) using methods
+          function fun(e) {
+            e.preventDefault()
+            var inp=document.getElementsByTagName('input')
+            console.log(inp[0].value)
+            console.log(inp[1].value)
+        }
+
+
+        keyboard events
+        1) keydown
+        2) keyup
+        3) keypress
+
+
+        
+        
+        document.addEventListener('keypress',function(e){
+            console.log(e.key)
+            if (e.key=="Enter"){
+                alert('enter clicked ')
+            }
+        })
+        //how to disable developer options
+            document.addEventListener('keydown',(e)=>{
+                console.log(e);
+                if(e.key=='F12'){
+                    e.preventDefault()
+                }
+                if( e.shiftKey && e.ctrlKey && (e.key=="J" || e.key=="I"))
+                alert('developer options disbaled')
+                e.preventDefault()
+            })
+            //how to disable right click
+            document.addEventListener("contextmenu",(e)=>{
+                e.preventDefault()
+            })
+        //     */
+        //    var inp=document.querySelector('input')
+        //    inp.addEventListener('keydown',(e)=>{
+        //     console.log(e.key)
+        //     var text=document.querySelector('div')
+        //     text.innerText+=e.key
+        //    })
+            </script>
+</body>
+
+</html>
