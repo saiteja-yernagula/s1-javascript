@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD with Array</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      margin-left: 5px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    li {
+      margin-top: 10px;
+      list-style: none;
+    }
+  </style> 
+</head>
+<body>
+
+    <!-- <form action="">
+        <input type="text">
+        <button>submit</button>
+    </form> -->
+
+    <!-- <select name="" id="">
+        <option value="html">html</option>
+        <option value="css">css</option>
+        <option value="js">js</option>
+    </select>
+
+    <input type="text">
+    <input type="color" id="dropdown"> -->
+
+    <input type="text">
+    <button onclick="getdata()">add </button>
+
+    <ul>
+
+    </ul>
+    
+  <script>
+    /*
+
+    key events
+    and how to access input values
+
+    form events
+    submit
+    change
+    focus
+    blur
+    input
+    click
+
+    
+    */ 
+
+    // submit event
+
+    // var form=document.querySelector('form')
+    // form.addEventListener('submit',(e)=>{
+    //     e.preventDefault()
+    //     console.log(e.target[0].value)
+    // })
+
+    // change 
+
+    // <input type='color' >
+    // var select=document.querySelector('input')
+    // select.addEventListener("change",()=>{
+    //     document.body.style.background=select.value
+    // })
+
+    //focus
+    // select.addEventListener('focus',()=>{
+    //     select.style.background='yellow'
+    // })
+
+    // blur
+    //     select.addEventListener('blur',()=>{
+    //         alert(' lost focus')
+    //     document.body.style.background='lightblue'
+    // })
+    
+
+    // select.addEventListener('input',()=>{
+    //     console.log(select.value)
+    // })
+
+    var ul=document.querySelector('ul')
+
+    function getdata(){
+        let inp=document.querySelector('input')
+        console.log(inp.value)
+
+        let li=document.createElement('li')
+        let span=document.createElement('span')
+        span.innerText=inp.value
+
+        let btn1=document.createElement('button')
+        btn1.innerText='update'
+
+        btn1.addEventListener('click',()=>{
+            var newdata=prompt('enter task name')
+            span.innerText=newdata
+        })
+        
+        let btn2=document.createElement('button')
+        btn2.innerText='delete'
+        btn2.addEventListener('click',()=>{
+            li.remove()
+        })
+
+
+        li.append(span,btn1,btn2)
+        console.log(li)
+        ul.append(li)
+
+        
+        
+    }
+
+
+
+
+  </script>
+</body>
+</html>
