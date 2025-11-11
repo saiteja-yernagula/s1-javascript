@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+array
+
+methods of an array
+ 1) at method
+ it is used to return a item at a particular index
+ it takes both negative and positive integers
+
+ let arr=[1,2,3]
+ console.log(arr.at(0))//1
+ console.log(arr.at(-1))//3
+
+ 2) length
+ it is used to return the no of items in an array
+ console.log(arr.length)
+ 
+ 3) how to merge
+ concat- it is used to merge two or more arrays
+ let arr2=['html','css']
+ console.log(arr.concat([4,5,6],[7,8,9],arr2))
+
+ 4) splice
+ it is used to manage the items in array
+ by adding,removing, modifying and it always works on 
+ the existing one
+
+ syntax
+ arr.splice(startindex, deletecount,newitem1,newitem2....)
+  
+ let tech=['html','css','js']
+ //  how to add 
+ tech.splice(3,0,'react','mysql','python','django')
+ console.log(tech)
+ 
+ //how to modify
+ tech.splice(4,3,'nodejs','express js','mongodb')
+ console.log(tech)
+ 
+ //how to delete
+ tech.splice(4,3)
+ console.log(tech)
+
+ 5) slice 
+ it is used to return portion of a array by extracting
+ the items
+
+ let arr=['html','css','js','python','django']
+ console.log(arr.slice(0,3))//html','css','js',
+ console.log(arr.slice(-2))//python and django
+
+ 6) push
+ it is used to add the item at end of an array
+ and it returns the no of items
+ let cart=[]
+
+ cart.push('laptop')
+ cart.push('mobile')
+ console.log(cart.push('bluetooth'))//3
+
+ 7) pop
+ it is used to remove a last element
+  and it returns the removed element
+let cart=['mobile','laptop','earbuds']
+cart.pop()//remove earbuds
+console.log(cart.pop()) //remove laptop and 
+// returns laptop
+ 
+8) unshift
+it is used add the item at the begginning and returns
+the no of items
+let cart=['mobile','laptop','earbuds']
+console.log(cart.unshift('desktop'))//add and return no of items
+
+9) shift
+it is used to remove the first element and returns
+the removed element
+let cart=['mobile','laptop','earbuds']
+cart.shift()
+console.log(cart)
+
+10) sort
+it is used sort the elements of an array in lexicographical
+order
+let arr=[19,0,1,8,3]
+arr.sort()
+console.log(arr)
+
+let arr=['html','css']//based on a ascii values
+arr.sort()
+console.log(arr)
+
+11) reverse
+it is used to reverse an array
+let arr=[19,0,1,8,3]
+arr.reverse()
+console.log(arr)
+
+12) join
+it is used to convert array into string based on a specified
+seperator
+let arr=[19,0,1,8,3]
+console.log(arr.join('-'))
+
+13) flat
+it is used to concate  sub items to the array until 
+the specified depth
+let arr=[1,2,[3,4,[5,6]]]
+console.log(arr.flat(2))
+
+search methods
+indexOf()- it is used to check the index of an items
+           and returns the first precedence index
+           if not found returns -1
+let arr=['html','css','js', 'html']
+console.log(arr.indexOf('html'))//0
+console.log(arr.indexOf('html',2))//3
+console.log(arr.indexOf('react'))//-1
+
+lastIndexOf()-it is used to check the index of an item
+           from last and if not found returns -1
+let arr=['html','css','js', 'html']
+console.log(arr.lastIndexOf('html'))//3
+
+includes()
+it used to check the existence of an item and returns true
+if exists otherwise false
+let arr=['html','css','js', 'html']
+console.log(arr.includes('react'))
+console.log(arr.includes('react'))
+
+ */
+
+
+
+
+
+//  let arr=['html','css','js','python','django']
+//  console.log(arr.slice(0,3))//html','css','js',
+// console.log(arr.slice(-2))//python and django
+        
+//  let arr=[1,2,3]
+//  console.log(arr.at(0))//1
+//  console.log(arr.at(-1))//3
+//  console.log(arr.length)
+//  let arr2=['html','css']
+//  console.log(arr.concat([4,5,6],[7,8,9],arr2))
+
+
+    </script>
+    
+</body>
+</html>
