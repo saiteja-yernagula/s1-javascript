@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+      let std=['jenny']
+
+      let flag=true
+
+      while(flag){
+        let inp=prompt('enter input')
+        switch(inp){
+          case '1': 
+          var newstd=prompt('enter a student name')
+          std.push(newstd)
+          console.log('student added')
+          break;
+          case '2':
+            console.log(std)
+            break;
+
+          case '3':
+            var upddata=prompt('enter the name which u want to update')
+            var newind=std.indexOf(upddata)
+
+             if (newind==-1){
+              console.log('student not found')
+             }
+             else{
+              var newname=prompt('enter a new name')
+              std.splice(newind,1,newname)
+              console.log('updated')
+             }
+             break;
+
+          case '4':
+            var deldata=prompt('enter a name which u want to delete')
+            var delind=std.indexOf(deldata)
+            if(delind==-1){
+              console.log('student not found')
+            }else{
+              std.splice(delind,1)
+              console.log('student deleted')
+            }
+            break;
+
+          case '5':
+            var searchdata=prompt('enter a name to search ')
+            if (std.includes(searchdata)){
+              console.log(searchdata,' is found')
+            }
+            else{
+              console.log(searchdata,' is not found')
+              
+            }
+            break;
+
+          case '6':
+            std.sort()
+            console.log('sorted data succesfully')
+            break;
+          case '7':
+            std.reverse()
+            console.log('reversed')
+            break;
+      
+
+          case '8':
+            flag=false
+            console.log('operation exited')
+            break;
+          
+          
+
+
+        }
+
+      }
+    </script>
+</body>
+</html>
