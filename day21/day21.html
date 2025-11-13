@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        1.how to find whether a min is first or max is first
+
+        let arr=[28,1,32,2,9,10]//min is first
+
+        
+        
+        */ 
+        // let arr=[28,32,2,9,10]//max is first
+        // var min=arr[0]
+        // var max=arr[0]
+        // var minind=0
+        // var maxind=0
+        // for ( var i in arr){
+        //     if(arr[i]<min){
+        //         min=arr[i]
+        //         minind=i
+        //     }
+        //     if(arr[i]>max){
+        //         max=arr[i]
+        //         maxind=i
+        //     }
+        // } 
+        // if(minind<maxind){
+        //     console.log('min is first')
+        // }
+        // else{
+        //     console.log('max is first')
+        // }
+        /* 
+        let arr=[1,2,3,4,4,5]//
+        let newarr=[]
+
+        for (i of arr){
+            if (!newarr.includes(i)){
+                newarr.push(i)
+            }
+        }
+        if(arr.length==newarr.length){
+            console.log('it doesnot contain duplicates')
+        }else{
+            console.log('it  contain duplicates')
+        }
+        //
+        let arr=[3,5,5,32,9,11,17]
+        let emp=[]
+        function isprime(n){
+            if (n<=1){
+                return false
+            }
+            for (i=2;i<n;i++){
+                if (n%i==0){
+                    return false
+                }
+            }
+            return true
+        }
+
+      for (j of arr){
+        emp.push(isprime(j))
+    }
+    console.log(arr)
+    console.log(emp)
+    */ 
+
+    /*
+    hof
+    higher order functions are the function that takes function
+    as an argument and return the result with modified value
+    
+    built in hof
+    forEach
+    map
+    filter
+    reduce
+    sort
+    find
+    some 
+    every
+
+    forEach
+    it is used to iterate the elements of an array by applying
+    provided function for each element and it doesn't return anything
+
+    syntax
+    let arr=['html','css','js']
+
+    arr.forEach((val,ind,arr)=>{
+    console.log(val)html    css     js
+    console.log(ind)0     1     2
+    console.log(arr) ['html','css','js'] ['html','css','js'] ['html','css','js']
+    
+    })
+
+    map
+    it is used to tranform an elements of an array by applying
+    the provided function for each element and return the transformed 
+    array
+    let arr=['html','css','js']
+    let newarr=arr.map((val,ind,ar)=>{
+    return 'frontendtech- '+ val
+    })
+    console.log(newarr)
+    //['frontendtech- html','frontendtech- css','frontendtech- js']
+
+    
+
+    //how to double an each element
+    let arr=[1,3,4,6,35,3]
+    let doublearr=arr.map(v=>v+v)
+    console.log(doublearr)
+    */
+       let arr=[1,3,4,6,35,3]
+    let doublearr=arr.map(v=>v%2==0)
+    console.log(doublearr)
+//['frontendtech- html','frontendtech- css','frontendtech- js']
+
+
+
+    // let arr=['html','css','js']
+    // let a=arr.forEach((val,ind,ar)=>{
+    //     console.log('hello')
+    //     console.log(ar)
+    //     return val
+    // })
+
+    // console.log(a)
+    </script>
+    
+</body>
+</html>

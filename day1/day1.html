@@ -407,85 +407,115 @@ Expected Output: Display the sorted array.
   8. Exit
   Enter your choice (1-8): 
   
+
+  
+  
+Task 1: Double the Numbers
+Objective: Double each number in an array.
+ use the map method to create a new array where each number is doubled.
+
+Task 2: Using map
+Objective: Create a new array with each element squared.
+ use the map method to create a new array 
+ where each element is the square of the original element.
+
+Task 3: Using filter
+Objective: Filter out even numbers.
+Instructions: Given an array of numbers, use the filter method 
+to create a new array that contains only the odd numbers.
+
+Task 4: Filter Long Words
+Objective: Filter out words longer than 5 characters.
+Instructions: Given an array of words, use the filter method
+ to create a new array that contains only words with 5 or fewer characters.
+
+Task 5: Sum of Numbers
+Objective: Calculate the sum of all numbers in an array using reduce method.
+Instructions: Given an array of numbers, 
+use the reduce method to calculate the sum of all the numbers.
+
+Task 6: Calculate Average
+Objective: Calculate the average of an array of numbers.
+Instructions: Given an array of numbers, 
+use the reduce method to calculate the average.
+
+Task 7: Filter Adults
+Objective: Filter out people who are under 18.
+Instructions: Given an array of objects representing people, use the filter method to create a new array that contains only people who are 18 or older.
+const people = [
+  { name: "John", age: 17 },
+  { name: "Jane", age: 22 },
+  { name: "Jim", age: 15 },
+  { name: "Jack", age: 19 }
+];
+// [{ name: "Jane", age: 22 }, { name: "Jack", age: 19 }]
+
+
+const products = [
+  { name: "Laptop", price: 70000, rating: 4.5, inStock: true },
+  { name: "Phone", price: 35000, rating: 4.2, inStock: false },
+  { name: "Tablet", price: 25000, rating: 3.8, inStock: true },
+  { name: "Headphones", price: 4000, rating: 4.8, inStock: true },
+  { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
+];
+add gst
+filter based on rating
+total inventory
+sort by price and rating
+check stock
+verify ratings
+
+const students = [
+  { name: "Anjali", marks: 85, subject: "Math" },
+  { name: "Ravi", marks: 42, subject: "Science" },
+  { name: "Kiran", marks: 67, subject: "English" },
+  { name: "Sneha", marks: 91, subject: "Math" },
+  { name: "Rahul", marks: 55, subject: "Science" }
+];
+
+const cart = [
+  { item: "Shoes", qty: 2, price: 2500 },
+  { item: "T-shirt", qty: 3, price: 800 },
+  { item: "Watch", qty: 1, price: 4500 },
+  { item: "Socks", qty: 5, price: 100 }
+];
+  
+  
+  🛍️ Shopping Cart
+const cart = [
+  { item: "Shoes", price: 1500, quantity: 2 },
+  { item: "Bag", price: 800, quantity: 1 },
+  { item: "Watch", price: 3000, quantity: 1 }
+];
+
+
+Tasks:
+
+map: Add a new key total = price * quantity.
+filter: Show items where price > 1000.
+reduce: Find total bill amount.
+some: Check if any item costs more than ₹2000.
+every: Check if all quantities > 0.
+sort: Sort items by price (low → high).
+  
+
+Combine multiple array methods.
+
+Map + Filter:
+From [10, 25, 30, 45, 50],
+First double the numbers using map,
+Then filter only those above 60.
+
+Filter + Reduce:
+From an array of numbers, filter only even numbers and 
+find their sum.
+
+
   
     -->
 
-    <script>
-
-      let std=['jenny']
-
-      let flag=true
-
-      while(flag){
-        let inp=prompt('enter input')
-        switch(inp){
-          case '1': 
-          var newstd=prompt('enter a student name')
-          std.push(newstd)
-          console.log('student added')
-          break;
-          case '2':
-            console.log(std)
-            break;
-
-          case '3':
-            var upddata=prompt('enter the name which u want to update')
-            var newind=std.indexOf(upddata)
-
-             if (newind==-1){
-              console.log('student not found')
-             }
-             else{
-              var newname=prompt('enter a new name')
-              std.splice(newind,1,newname)
-              console.log('updated')
-             }
-             break;
-
-          case '4':
-            var deldata=prompt('enter a name which u want to delete')
-            var delind=std.indexOf(deldata)
-            if(delind==-1){
-              console.log('student not found')
-            }else{
-              std.splice(delind,1)
-              console.log('student deleted')
-            }
-            break;
-
-          case '5':
-            var searchdata=prompt('enter a name to search ')
-            if (std.includes(searchdata)){
-              console.log(searchdata,' is found')
-            }
-            else{
-              console.log(searchdata,' is not found')
-              
-            }
-            break;
-
-          case '6':
-            std.sort()
-            console.log('sorted data succesfully')
-            break;
-          case '7':
-            std.reverse()
-            console.log('reversed')
-            break;
-      
-
-          case '8':
-            flag=false
-            console.log('operation exited')
-            break;
-          
-          
-
-
-        }
-
-      }
-    </script>
+    
+ 
 
 </body>
 </html>
