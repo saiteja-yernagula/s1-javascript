@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        forEach
+        map
+
+        filter
+        it is used to create new array that passes
+        a certain condition by applying a provided 
+        boolean function and returns filtered array
+        
+        let arr=[13,3,35,6,8,2]
+        let newarr=arr.filter((val,ind,ar)=>{
+            return val%2==0
+        })[6, 8, 2]
+
+
+
+
+
+
+
+        
+        
+        let data=[
+            {
+                name:'john',
+                age:25,
+                branch:'cse'
+            },
+            {
+                name:'jessy',
+                age:19,
+                branch:'cse'
+            },
+            {
+            name:'jack',
+            age:20,
+            branch:'civil'
+        },
+        {
+            name:'jenny',
+            age:17,
+            branch:'cse'
+        }
+    ]
+    
+    let newdata=data.filter((val)=>{
+        return val.age<20
+    })
+    console.log(newdata)
+    
+    let newdata1=data.filter((val)=>{
+        return val.branch=="cse"
+      })
+      console.log(newdata1)
+
+      reduce 
+      it is used to convert the arr of elements into 
+      single value by performing any mathematical operation
+      let arr=[1,2,3]
+      let total=arr.reduce((acc,val,ind,ar)=>{
+      return acc+val
+      },0)
+      console.log(total)//6
+
+      sort
+      it is used to create a sorted array in asscending
+      descending order by comparing a with b
+      let arr=[19,6,10,2,3]
+      //asscending
+      let sorted=arr.sort((a,b)=>{
+      return a-b
+      })
+
+      //descending order
+      let sorted=arr.sort((a,b)=>{
+      return b-a
+      })
+
+      if a-b is negative it will keep a before b
+      it a-b is positive it will swap b before a
+      
+
+      
+      */ 
+
+  let data=[
+  {
+      name:'john',
+      age:25,
+      branch:'cse'
+  },
+  {
+      name:'jessy',
+      age:19,
+      branch:'cse'
+  },
+  {
+  name:'jack',
+  age:20,
+  branch:'civil'
+},
+{
+  name:'jenny',
+  age:17,
+  branch:'cse'
+}
+]
+      let sorted=data.sort((a,b)=>{
+      return a.age-b.age
+      })
+      console.log(sorted)
+
+      let somearray=data.every((val,ind,ar)=>{
+    return val.age<30
+    })
+
+    console.log(somearray)
+    /*
+    some
+    it returns true if any of element in array passes the
+    condtion
+    let somearray=data.some((val,ind,ar)=>{
+    return val.age<20
+    })
+    console.log(somearray)//true
+
+    every
+    it returns true only if all of element in array passes the
+    condtion
+    let somearray=data.every((val,ind,ar)=>{
+    return val.age<20
+    })
+    console.log(somearray)//false
+
+    find
+    it is used to return first precedence of an element
+    that passes condition
+    let findarr=data.find((val)=>{
+        return val.branch=="cse"
+    })
+    console.log(findarr)
+    
+    */   
+
+      </script>
+</body>
+</html>
