@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            gap: 20px;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>filtered products</h1>
+
+    <label for="">filtered by brand</label>
+    <select name="" id="filteredbybrand">
+        <option value="all">all</option>
+        <option value="apple">apple</option>
+        <option value="samsung">samsung</option>
+        <option value="onePlus">oneplus</option>
+    </select> <br>
+    <label for="">filtered by max price</label>
+
+    <input type="text" id="filteredbyprice" placeholder="enter max price">
+    <br>
+
+    <label for="">sort by price</label>
+    <select name="" id="sortedbyprice">
+        <option value="all">all</option>
+        <option value="high">high-low</option>
+        <option value="low">low-high</option>
+
+    </select> <br>
+
+    <div class="container">
+
+    </div>
+    <script>
+        let products = [
+            {
+                brand: "apple",
+                name: "iPhone 15",
+                price: 80000,
+                img: "https://picsum.photos/seed/apple1/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy S23",
+                price: 70000,
+                img: "https://picsum.photos/seed/samsung1/200"
+            },
+            {
+                brand: "onePlus",
+                name: "OnePlus 11",
+                price: 55000,
+                img: "https://picsum.photos/seed/oneplus1/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone 14",
+                price: 60000,
+                img: "https://picsum.photos/seed/apple2/200"
+            },
+            {
+                brand: "samsung",
+                name: "A52",
+                price: 25000,
+                img: "https://picsum.photos/seed/samsung2/200"
+            }
+        ];
+
+
+
+
+        function display(arr) {
+
+            let container = document.querySelector('.container')
+            container.innerHTML = ''
+
+
+            let newarr = arr.map((val) => {
+                let card = document.createElement('div')
+                card.classList.add('card')
+
+                card.innerHTML = `
+            <img src=${val.img}>
+            <h1>${val.brand}</h1>
+            <div>${val.name}</div>
+            <div>${val.price}</div>`
+                container.append(card)
+            })
+        }
+
+        display(products)
+
+
+        let a = document.querySelector('#filteredbybrand')
+
+        a.addEventListener('change', () => {
+            filteredarr = products.filter((val) => {
+                return val.brand == a.value
+
+            })
+            display(filteredarr)
+            if (a.value == 'all') {
+                display(products)
+            }
+        })
+
+        let b=document.querySelector("#filteredbyprice")
+        b.addEventListener('input',()=>{
+            console.log(b.value)
+
+            let filteredby=products.filter((val)=>{
+                return val.price<=b.value
+
+            })
+           
+            display(filteredby)
+            if (b.value==""){
+            display(products)
+
+            }
+
+        })
+
+        c=document.querySelector('#sortedbyprice')
+        c.addEventListener('change',()=>{
+            console.log(c.value)
+            if (c.value=='low'){
+                let sorted=products.sort((a,b)=>{
+                return a.price-b.price
+            })
+            console.log(sorted)
+            display(sorted)
+
+
+            }
+
+            if (c.value=='high'){
+                let sorted=products.sort((a,b)=>{
+                return b.price-a.price
+            })
+            console.log(sorted)
+            display(sorted)
+
+
+            }
+
+            if(c.value=='all'){
+            display(products)
+
+            }
+
+
+        })
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
