@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        apply 
+        filter 
+        sort
+        iterate
+
+
+        spread operator
+        destructuring
+        it is used to extract the values from an
+        array and object and assign to the variable
+        
+        let arr=[10,12,13,[15,16]]
+        let [a,,c,[d,e]]=arr
+ 
+        console.log(a,c,d)
+        
+        
+        
+        // a=[1]
+        // b=[2]
+        // c=[...a,...b]
+        
+        let arr=[10, 25, 30, 45, 50]
+        
+        let newarr=arr.map(v=>v+v).filter(v=>v>60)
+        console.log(newarr)
+        
+        let evenarr=arr.filter(v=>v%2==0).reduce((acc,val)=>acc+val)
+        console.log(evenarr);
+        
+        */
+
+const products = [
+  { name: "Laptop", price: 70000, rating: 4.5, inStock: true },
+  { name: "Phone", price: 35000, rating: 4.2, inStock: true },
+  { name: "Tablet", price: 25000, rating: 3.8, inStock: true },
+  { name: "Headphones", price: 4000, rating: 4.8, inStock: true },
+  { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
+];
+let gstproducts=products.map((val)=>{
+    return {...val,
+        gst:val.price*1.18
+    }
+})
+console.log(gstproducts);
+
+let  filterarr=products.filter(v=>v.rating>4)
+console.log(filterarr)
+
+let total=products.reduce((acc,val)=>acc+val.price,0)
+console.log(total)
+
+let sortbyprice=products.sort((a,b)=>a.price-b.price)
+let sortbyrating=products.sort((a,b)=>a.rating-b.rating)
+console.log(sortbyprice)
+console.log(sortbyrating)
+
+let checkstock=products.some(val=>val.inStock==false)
+console.log(checkstock);
+
+let rating=products.every((val)=>val.rating>=4)
+console.log(rating)
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
