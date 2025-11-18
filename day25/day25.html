@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <button onclick="console.log(this)">click</button>
+
+    <script>
+        /*
+        map filter 
+        destructuring
+        rest and spread
+
+
+        let arr=[10,25,7]
+
+        objects
+        it is used to store the data in key value pairs
+        it is accessed by named index
+        object have methods and properties
+
+        how to create an object
+        1. by literal notation
+        let obj={
+        objproperty : "value"
+        }
+
+        let obj={
+        name:'john',
+        age: 25
+        }
+
+        2. by constructor
+        let obj=new Object()
+        console.log(obj)
+        
+        how to access
+        1) by dot notation
+        obj.key
+
+        obj.name
+
+        2) by square bracket notation
+        obj['key']
+        obj['age']
+
+        how to modify
+        obj['name']='jessy'
+        obj.age='23'
+
+        how to add 
+        obj.role='developer'
+        obj['city']='hyd'
+
+        how to delete
+        delete obj.city
+
+        object method
+        let obj = {
+            name: 'john',
+            age: 25,
+            details: function () {
+                    console.log(this.name)
+                    console.log(this.age)
+                }
+        }
+
+        obj.details()
+
+
+
+
+        this 
+        it is used to represent the current calling object
+        based on a context
+       
+        in global it represents -window
+        console.log(this)//window object
+
+        in object
+            console.log(this)//current object
+        
+        in button- it will represent the element itself
+
+        how to iterate an object
+        for (let i in obj){
+        console.log(i)//keys
+        console.log(obj[i])//values
+        }
+
+
+        object methods
+        1) Object.keys(obj)
+        it will return the keys of an object in an array
+        format
+
+        2) Object.values(obj)
+        it will return the values of an object in an array
+        format
+        
+        3) Object.entries(obj)
+        it will return the key and values in a pairs of 
+        an array
+
+        4) Object.assign(target,source,source)
+        let obj = {
+            name: 'john',
+            age: 25,
+        }
+        obj2={
+            city:'hyd'
+        }
+        console.log(Object.assign(obj,obj2))//on existing one
+        console.log(Object.assign({},obj,obj2))//on new obj
+        console.log({...obj,...obj2})//on new obj using spread
+
+        find length of an object
+        console.log(Object.values(obj).length)
+
+        
+
+
+
+
+        */
+
+      
+        let obj = {
+            name: 'john',
+            age: 25,
+        }
+
+        // how to the check the existence
+        console.log(obj.hasOwnProperty('role'))//false
+        console.log(obj.hasOwnProperty('name'))//true
+
+        console.log('name' in obj)//true
+        console.log('role' in obj)//false
+        
+        Object.freeze(obj)//we can only access we cannot 
+                    //perform deletion , addition, modificaton
+        Object.seal(obj)//we can modify but we cannot add and we 
+                // cannot delete
+        //add
+        obj.city='hyd'
+        //modify
+        obj.name='jessy'
+        //delt
+        delete obj.age
+        console.log(obj)
+
+
+
+        // obj2={
+        //     city:'hyd'
+        // }
+        // console.log(Object.values(obj).length)
+        // console.log(Object.assign(obj,obj2))
+        // console.log(Object.assign({},obj,obj2))
+        // console.log({...obj,...obj2})
+
+
+        // console.log(Object.keys(obj))
+        // console.log(Object.values(obj))
+        // console.log(Object.entries(obj))
+        // for (let i in obj){
+        // console.log(i)//keys
+        // console.log(obj[i])//values
+        
+        // }
+        // obj.details()
+        // obj['name'] = 'jessy'
+        // obj.age = '23'
+        // obj.role = 'developer'
+        // obj['city'] = 'hyd'
+
+        // delete obj.city
+
+        // console.log(obj)
+    </script>
+</body>
+
+</html>
