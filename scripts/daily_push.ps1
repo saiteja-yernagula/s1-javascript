@@ -27,13 +27,37 @@ try {
 Log "GIT STATUS BEFORE:"; git status --porcelain | ForEach-Object { Log "  $_" }
 
 # list day* folders (helpful to see what the scheduled task saw)
-Get-ChildItem -Name -Directory day* -ErrorAction SilentlyContinue | ForEach-Object { Log "DIR: $_" }
+$dirs = Get-ChildItem -Name -Directory day* -ErrorAction SilentlyContinue
+$dirs | ForEach-Object { Log "DIR: $_" }
+
+# Check for any existing changes before adding
+$statusBefore = git status --porcelain
+
+if (-not ($statusBefore -and $statusBefore.Trim())) {
+    # No changes: create next day folder/file so there's something to commit
+    Log "No changes detected before add — creating next day folder and starter file."
+    $numbers = @()
+    foreach ($d in $dirs) {
+        if ($d -match '^day(\d+)$') { $numbers += [int]$Matches[1] }
+    }
+    if ($numbers.Count -eq 0) { $next = 1 } else { $next = ($numbers | Measure-Object -Maximum).Maximum + 1 }
+    $newDir = Join-Path $repoRoot ("day$next")
+    if (-not (Test-Path $newDir)) { New-Item -ItemType Directory -Path $newDir | Out-Null; Log "Created directory: $newDir" }
+    $newFile = Join-Path $newDir ("day$next.html")
+    if (-not (Test-Path $newFile)) {
+        $content = "<!-- Created by daily_push on $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') -->`n" + "<h1>Day $next</h1>`n"
+        $content | Out-File -FilePath $newFile -Encoding utf8
+        Log "Created starter file: $newFile"
+    } else {
+        Log "Starter file already exists: $newFile"
+    }
+}
 
 # Stage all changes
 Log "Running: git add -A"
 git add -A 2>&1 | ForEach-Object { Log "git add: $_" }
 
-# Check for any changes to commit
+# Check for any changes to commit after adding
 $status = git status --porcelain
 
 if ($status -and $status.Trim()) {
@@ -47,7 +71,7 @@ if ($status -and $status.Trim()) {
         $commitResult | ForEach-Object { Log "git commit: $_" }
     }
 } else {
-    Log "No changes detected. Creating an empty commit with message 'dailynotes'."
+    Log "No changes detected even after add. Creating an empty commit with message 'dailynotes'."
     $commitResult = git commit --allow-empty -m 'dailynotes' 2>&1
     if ($LASTEXITCODE -ne 0) {
         Log "git empty commit failed: $commitResult"
