@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        string
+        methods
+        
+        length
+        at
+        charAt
+        charCodeAt
+        String.fromCharCode
+        slice
+        subString
+        subStr
+
+
+        10) concat
+        it is used to merge two or more strings
+        str='hello'
+        str2='world'
+        console.log(str.concat(str2,' js'))
+        console.log(str+ str2)
+
+        11) split
+        it is used to convert the string into array
+        based on a separator
+        str='javascript html css react'
+        console.log(str.split(' '))  ['javascript', 'html', 'css', 'react']
+
+        12) trim
+        it is used remove spaces at the beginning and 
+        ending of a string
+        str='       javascript        '
+        console.log(str.trim())
+
+        13) toUpperCase()
+            toLowerCase()
+
+            these method used to convert the characters
+            into upper and lowercases
+        str='       javascript        '
+        console.log(str.trim().toUpperCase())
+        console.log(str.trim().toLowerCase())
+
+        14) replace
+        it is used create a string with modified string
+        we can change the content of a first precedence
+        str='JS is amazing js'
+        console.log(str.replace(/js/gi,'typescript'))
+        flagsets
+        /g -make it as a global
+        /i- make it as a incase sensitive
+
+        search methods
+        1) indexOf()
+        it is used to return the index of a specified character
+        if not it returns  -1
+        it accepts second parameter also
+
+    str='hello world'
+    console.log(str.indexOf('z',6))//-1
+    console.log(str.indexOf('l',6))//9
+    console.log(str.indexOf('l'))//2
+    console.log(str.lastIndexOf('l',5))//3
+    console.log(str.lastIndexOf('l'))//9
+
+    2) lastIndexOf() it is used to return the index of a specified character
+    from the backwards
+        if not it returns  -1
+        it accepts second parameter also
+
+    3) search()
+    it is used to return the index of a substring
+    and it doent take second parameter
+    str='hello world'
+    console.log(str.search('world'))//6
+
+    4) includes()
+    it is used to the  find the
+    existence of a particular characters
+    it returns boolean values
+    str='hello world'
+    console.log(str.includes('world'))//true
+    console.log(str.includes('js'))//false  
+
+    str='javascript'
+    console.log(str.split('').reverse())
+        
+        */  
+    str='javascript'
+    console.log(str.split('').reverse().join(''))
+
+    rev=''
+    for (var i=str.length-1;i>=0;i--){
+        rev+=str[i]
+    }
+    console.log(rev)
+
+    rev2=''
+    for( j of str){
+        rev2=j+rev2
+    }
+    console.log(rev2)
+
+    var str2='javaj'
+    var emp=''
+
+    for (let j of str2){
+        if (!emp.includes(j)){ 
+            emp+=j
+        }
+    }
+    console.log(emp)
+    var str3='javascript'
+var vowels='aeiou'
+for (var j of str3){
+    if (vowels.includes(j)){
+        console.log('it contains')
+        break
+    }
+}
+
+
+    
+
+    </script>
+</body>
+</html>
