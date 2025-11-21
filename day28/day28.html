@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        string methods
+
+        number and math methods
+
+    1) Number()
+    convert a value into a number
+    let str='123'
+console.log(typeof Number(str))
+
+2) toFixed()
+it is used to format a number into fixed decimal places
+and returns string
+let num=123.99
+console.log(num.toFixed(2))//123.00
+console.log(num.toFixed(2))//123.99
+console.log(num.toFixed(1))//124.0
+
+3) parseInt
+it is used convert the string into whole  number
+and it stops checking when it hits non number and returns
+NaN if it is not a number
+console.log(parseInt('123hello'))//123
+console.log(parseInt('123    hello'))//123
+console.log(parseInt('12.3    hello'))//12
+console.log(parseInt('hello123'))//NaN
+console.log(parseInt('     123     '))//123
+
+4) parseFloat
+it is used to convert the string into floating number
+and it stops checking when it hits non number and returns
+NaN if it is not a number
+
+console.log(parseFloat('12.h3    hello'))//12.3
+
+5) 
+isNaN()
+it is used to check whether it is nan or not
+it returns true if it is not a number
+it returns false if it a number
+console.log(isNaN('hello'))//true
+
+console.log(isNaN(''))//false
+console.log(isNaN('12.0'))//false
+console.log(isNaN('123'))//false
+console.log(isNaN(true))//false
+
+math methods
+1) Math.ceil()
+it is used to round off the number to the largest integer
+console.log(Math.ceil(9.9))//10
+console.log(Math.ceil(9.1))//10
+console.log(Math.ceil(-9.1))//-9
+console.log(Math.ceil(-9.9))//-9
+
+2) Math.floor()
+it is used to round down a number to a smallest integer
+console.log(Math.floor(9.9))//9
+console.log(Math.floor(9.1))//9
+console.log(Math.floor(-9.1))//-10
+console.log(Math.floor(-9.9))//-10
+
+3) Math.round()
+it is used to round off a numeber to a nearest integer
+console.log(Math.round(9.9))//10
+console.log(Math.round(9.5))//10
+console.log(Math.round(9.4))//9
+console.log(Math.round(-9.5))//-9
+console.log(Math.round(-9.6))//-10
+
+4) Math.random()
+it is used to generate a random number
+between 0-1
+console.log(Math.random())//0-1
+console.log(Math.random()*10)
+console.log(Math.random()*100)
+console.log(Math.floor(Math.random()*1000`0))//otp
+
+let arr=['frontend','backend','database']
+console.log(arr[Math.floor(Math.random()*arr.length)])
+
+5) Math.trunc()
+it is used to truncate a decimal points
+console.log(Math.trunc(2883.88))//2883
+
+6) Math.abs()
+it is used to conver the negative number into positive
+number(absolute)
+console.log(Math.abs(-10))//10
+7) 
+Math.min(10,2,109,1)//1
+Math.max(10,2,109,1)//109
+Math.pow(2,3)//8
+Math.sqrt(9)//3
+Math.sin()
+Math.cos()
+
+*/ 
+console.log(Math.max(10,2,109,1))
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
