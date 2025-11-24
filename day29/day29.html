@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container"></div>
+
+    <input type="date">
+    <button onclick="calc()">calculate</button>
+ 
+    <div class="date"></div>
+    <div class="day"></div>
+
+    <script>
+
+        /*
+        date methods
+
+        var d=new Date()
+        console.log(d)
+
+        get methods
+        getFullYear()
+        getMonth()  0-11
+        getDay()//0-6
+
+        getDate()//current date
+        getHours()
+        getMinutes()
+        getSeconds()
+
+        set methods
+
+
+
+        */
+
+        var inp=document.querySelector('input')
+        function calc(){
+console.log(inp.value)
+let olddate=new Date(inp.value)
+let curdate=new Date()
+let dat=document.querySelector('.date')
+let da=document.querySelector('.day')
+dat.innerText=curdate.getFullYear()-olddate.getFullYear()
+da.innerText=Math.round((curdate-olddate)/(24*60*60*1000))
+
+        }
+
+
+        var olddate=new Date()
+        olddate.setFullYear(2000)
+        olddate.setDate(23)
+        olddate.setMonth(1)
+        olddate.setHours(10)
+        olddate.setMinutes(15)
+        olddate.setSeconds(30)
+
+        console.log(olddate)
+
+        var curdate=new Date()
+        console.log(curdate.getFullYear()-olddate.getFullYear())
+        // var d=new Date()
+        // console.log(d.toDateString())
+        // console.log(d.toLocaleDateString())
+        // console.log(d.toTimeString())
+        // console.log(d.toLocaleTimeString())
+
+        // var div=document.querySelector('.container')
+        // setInterval(()=>{
+        //     let d=new Date()
+        //     div.innerText=d.toLocaleTimeString()
+        // },1000)
+
+
+
+        // console.log(d.getFullYear())
+        // console.log(d.getMonth()+1)
+
+        // let months=['jan','feb','marc','apr','may','june','jul','aug','sep','oct','nov','dec']
+        // console.log(months[d.getMonth()])
+
+        // console.log(d.getDate())//24
+        // console.log(d.getDay())// 1
+        // console.log(d.getHours())//13
+        // console.log(d.getMinutes())//08
+        // console.log(d.getSeconds())//
+
+
+    </script>
+</body>
+</html>
