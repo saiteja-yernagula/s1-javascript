@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">sd</button>
+    <a href="new.html">new page</a>
+    <script>
+        /*
+
+        browser object model
+        it is a browser object that contains
+        information related to few things
+
+        1) window objects
+        2) history objects
+        3) screen objects
+        4) location objects
+        5) localstorage
+        6) timers
+        7) navigator objects
+
+        1) window objects
+           a) window.prompt()
+           b) window.alert()
+           c) window.confirm('are you really want to exit')
+              return true or false
+           d) window.innerWidth and window.innerHeight
+           e) window.open('url',"_self")
+window.open('https://www.programiz.com','_blank','width=300,height=300')
+           f) window.close()
+           function fun(){
+               if (window.confirm('are you want to exit')){
+                   window.close()
+               }
+           }
+
+        2) storage
+        localstorage
+        sessionstorage
+
+        localStorage.setItem('key','value')
+
+        how to store data in browser
+        let stdname='nandha'
+        localStorage.setItem('topper',stdname)
+
+        how to get
+        //let data=localStorage.getItem('topper')
+        console.log(data)
+        
+        
+        let name='akash'
+        let name2='nandha'
+        
+        localStorage.setItem('n',name)
+        sessionStorage.setItem('m',name2)
+
+        
+        */
+
+        let data1r={
+            name:'john',
+            age:26
+        }
+ //in first file
+localStorage.setItem('data1r',JSON.stringify(data1r))
+// JSON.stringify(obj)--it is used to convert obj into json format
+
+ //in second file
+  let data=JSON.parse(localStorage.getItem('data1r'))
+// JSON.parse()--it is used to convert json into js object
+
+
+
+    </script>
+    
+</body>
+</html>
