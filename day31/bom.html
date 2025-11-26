@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>page1
+
+    </h1>
+    <a href="page2.html">link</a>
+    <script>
+        /*
+         navigator objects
+         
+         if(navigator.onLine){
+            console.log('user online')
+        }else{
+            console.log('connection lost')
+    }
+    
+    console.log(
+        navigator.geolocation.getCurrentPosition((position)=>{
+            console.log(position.coords.latitude)
+            console.log(position.coords.longitude)
+        })
+    )
+
+
+location objects
+console.log(location.host)
+console.log(location.hostname)
+console.log(location.href)
+console.log(location.protocol)
+console.log(location.port)
+console.log(location.pathname)
+location.href="form.html"
+
+history objects
+history.back()
+history.forward()
+history.go()
+
+
+screen
+console.log(screen.availHeight)
+console.log(screen.colorDepth)
+
+timers
+setTimeOut()
+it is used to execute a block of code after a 
+specified time
+a=setTimeout(()=>{
+//block of code
+},1000)
+
+setInterval()
+it is used to executed a block repeatedly after every 
+specified duration
+a=setInterval(()=>{
+//block of code
+},1000)
+
+these two are used to stop the execution of the timing functions
+clearTimeOut()
+clearInterval()
+*/ 
+c=0
+a=setInterval(()=>{
+    console.log('hello')
+    console.log('hi')
+    c++
+    if (c==2){
+        clearInterval(a)
+    }
+},2000)
+
+
+</script>
+    
+</body>
+</html>
