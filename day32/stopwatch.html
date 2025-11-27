@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Stopwatch</title>
+
+    <style>
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            background: linear-gradient(135deg, #141E30, #243B55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .display{
+            font-size: 70px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            padding: 20px 40px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.15);
+            box-shadow: 0 0 20px rgba(0,255,255,0.4);
+            text-shadow: 0 0 20px rgba(0,255,255,0.8);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 20px cyan; }
+            to { box-shadow: 0 0 40px cyan; }
+        }
+
+        
+        button{
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 18px;
+            color: white;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            backdrop-filter: blur(5px);
+            min-width: 120px;
+        }
+
+        button:hover{
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255,255,255,0.4);
+        }
+
+        
+        button:active{
+            transform: scale(0.95);
+        }
+
+
+        button:nth-child(2){
+            border-color: lime;
+            color: lime;
+            box-shadow: 0 0 10px lime;
+        }
+
+        button:nth-child(2):hover{
+            background: lime;
+            color: black;
+        }
+
+        button:nth-child(3){
+            border-color: red;
+            color: red;
+            box-shadow: 0 0 10px red;
+        }
+
+        button:nth-child(3):hover{
+            background: red;
+            color: white;
+        }
+
+
+        button:nth-child(4){
+            border-color: yellow;
+            color: yellow;
+            box-shadow: 0 0 10px yellow;
+        }
+
+        button:nth-child(4):hover{
+            background: yellow;
+            color: black;
+        }
+
+        </style>
+
+</head>
+<body>
+    <div class="display">
+        0:0:0
+    </div>
+
+    <button onclick="start()">start</button>
+    <button onclick="stp()">stop</button>
+    <button onclick="rst()">reset</button>
+
+    <script>
+      let display=document.querySelector('div')
+      let s=0
+      let m=0
+      let h=0
+      flag=false
+
+      function start(){
+        if(flag) return
+
+        flag=true
+        timer=setInterval(()=>{
+            s++
+            if(s==60){
+                m++
+                s=0
+            }
+            if(m==60){
+                h++
+                m=0
+            }
+            display.innerHTML=`${h}:${m}:${s}`
+        },1000)
+      }
+
+      function stp(){
+        clearInterval(timer)
+        flag=false
+      }
+
+      function rst(){
+        stp()
+        h=0
+        m=0
+        s=0
+            display.innerHTML=`${h}:${m}:${s}`
+
+      }
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
