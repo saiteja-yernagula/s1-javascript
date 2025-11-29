@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+callback
+when a function definition is passed to another function
+as a argument and later execute in the outer function
+*/ 
+function one(callback){
+  console.log('one')
+  callback()
+}
+function two(callback){
+    setTimeout(()=>{
+        console.log('two')
+        callback()
+    },1000)
+}
+function three(callback){
+  console.log('three')
+  callback()
+}
+function four(){
+    setTimeout(()=>{
+        console.log('four')
+    },6000)
+}
+// one(()=>{
+//     two(()=>{
+//         three(()=>{
+//             four()
+//         })
+//     })
+// })
+
+// inp10     10+10       20-5     15*2    30/6   =5
+
+function  sum(val,callback){
+    callback(val+10)
+}
+function  sub(val,callback){
+    callback(val-5)
+}
+function  mul(val,callback){
+    callback(val*2)
+}
+function  div(val,callback){
+    callback(val/6)
+}
+// sum(10,(addres)=>{
+//    sub(addres,(subres)=>{
+//      mul(subres,(mulres)=>{
+//         div(mulres,(divres)=>{
+//             console.log(divres)
+//         })
+//      })
+//    })
+// })
+/*
+promises
+it is used to represent the eventual completion or failure
+of an asynchrnous operations
+promised are used to make network request and asynchronous
+tasks.
+
+promises have three states
+fullfilled
+pending
+rejected
+
+creating a promise
+let a=new Promise((res,rej)=>{
+data=10
+if(data==10){
+res('fullfilled')
+}else{
+res('rejected')
+}
+})
+consuming a promise
+1) .then.catch
+2) async await
+
+
+*/ 
+
+let a=new Promise((res,rej)=>{
+data=10
+if(data==110){
+    res('fullfilled')
+}else{
+    rej('rejected')
+}
+})
+
+a.then((r)=>{
+console.log(r)
+}).catch((err)=>{
+    console.log(err);
+    console.log('error found')
+})
+    </script>
+    
+</body>
+</html>
