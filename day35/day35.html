@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        callbacks
+
+        promises
+        have states- pending fullfilled rejected
+        creating a promise
+        consuming a promise
+
+
+        */
+
+
+        function one(){
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    res('task1 ')
+            },1000)
+            })
+        }
+        
+        function two(){
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    res('task2 ')
+            },3000)
+            })
+        }
+        function three(){
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    res('task3 ')
+            },2000)
+            })
+        }
+        function four(){
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    res('task4 ')
+            },300)
+            })
+        }
+
+
+        async function fun(){
+            let a =await one()
+            console.log(a);
+            let b =await two()
+            console.log(b);
+            let c =await three()
+            console.log(c);
+            let d =await four()
+            console.log(d);
+        }
+        fun()
+        // how to consume
+        // two().then((res)=>{console.log(res)})
+        // three().then((res)=>{console.log(res)})
+        // four().then((res)=>{console.log(res)})
+        // one().then((res)=>{console.log(res)})
+
+        // // promise chaining
+        // one().then((res)=>{
+        //     console.log(res)
+        //    return two()
+        // }).then((res)=>{
+        //     console.log(res)
+        //     return three()
+        // }).then((res)=>{
+        //    console.log(res);
+        //    return four()
+        // }).then((res)=>{
+        //     console.log(res)
+        // }).catch((err)=>{
+        //     console.log('error found')
+        // })
+
+        // promise methods
+//returns the all promise only after completion in an array format
+        // Promise.all([one(),two(),three(),four()])
+        // .then((res)=>console.log(res))
+
+        // Promise.race([one(),two(),three(),four()])
+        // .then((res)=>console.log(res))
+        //return the fastest response promise
+
+
+        function add(val){
+            return new Promise((res)=>{
+                res(val+10)
+            })
+        }
+        function sub(val){
+            return new Promise((res)=>{
+                res(val-5)
+            })
+        }
+
+        function mul(val){
+            return new Promise((res)=>{
+                res(val*2)
+            })
+        }
+        function div(val){
+            return new Promise((res)=>{
+                res(val/6)
+            })
+        }
+
+    //   add(10)
+    //   .then(addres=>sub(addres))
+    //   .then(subres=>mul(subres))
+    //   .then(mulres=>div(mulres))
+    //   .then(divres=>console.log(divres))
+
+    async function cal(){
+        let addres=await add(10)
+        let subres=await sub(addres)
+        let mulres=await mul(subres)
+        let divres=await div(mulres)
+        console.log(divres)
+    }
+    cal()
+
+
+
+    /*
+    async and await is used to perform aysnchronous operations
+    synchronously
+    it is associated with async and await keywords
+
+    async- it is used to make a function as asynchronous
+    await- it pauses an execution until the operation is completd
+
+    syntax
+    async function funname(){
+    let a = await promise
+    console.log(a)
+    }
+    
+    */ 
+    //
+
+
+
+    </script>
+    
+</body>
+</html>
