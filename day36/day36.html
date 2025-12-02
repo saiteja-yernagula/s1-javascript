@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        /*
+        promises  and methods 
+        async await
+        
+
+        how to call an api using then catch
+        */ 
+        fetch('https://fakestoreap.com/products/')
+        .then((res)=>{return res.json()})
+        .then((data)=>{
+
+        }).catch((err)=>console.log('error found'))
+
+        // how to call an api using async await
+async function getapidata(){
+    let apicall=await fetch('https://fakestoreapi.com/products/')
+    let data =await apicall.json()
+    console.log(data)
+}
+getapidata()
+
+// virtusa
+// tectoro
+// innovacx
+// alogonox
+
+
+    </script>
+</body>
+</html>
