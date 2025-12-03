@@ -1,0 +1,22 @@
+{
+  "students": [
+      { "id": 1, "name": "Teja", "course": "Python", "marks": 90 },
+      { "id": 2, "name": "Ravi", "course": "JavaScript", "marks": 85 },
+      { "id": 3, "name": "Kiran", "course": "React", "marks": 88 },
+      { "id": 4, "name": "Pooja", "course": "Django", "marks": 92 },
+      { "id": 5, "name": "Anil", "course": "Java", "marks": 78 },
+      { "id": 6, "name": "Manoj", "course": "NodeJS", "marks": 81 },
+      { "id": 7, "name": "Sita", "course": "Python", "marks": 95 },
+      { "id": 8, "name": "Rahul", "course": "React", "marks": 89 },
+      { "id": 9, "name": "Hari", "course": "JavaScript", "marks": 76 },
+      { "id": 10, "name": "Deepak", "course": "Django", "marks": 84 }
+  ],
+  
+  "courses": [
+      { "id": 1, "title": "Python Full Stack", "duration": "3 Months" },
+      { "id": 2, "title": "JavaScript Zero to Hero", "duration": "2 Months" },
+      { "id": 3, "title": "React Frontend", "duration": "2 Months" },
+      { "id": 4, "title": "Django Backend", "duration": "3 Months" },
+      { "id": 5, "title": "NodeJS Advanced", "duration": "1.5 Months" }
+  ]
+}

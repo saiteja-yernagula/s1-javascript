@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getapidata()">getdata</button>
+    <button onclick="postdata()">postdata</button>
+    <button onclick="putdata()">modify -replace the data</button>
+    <button onclick="deldata()">deldata</button>
+    <script>
+    async function deldata(){
+ let inp=prompt('enter id to delete')
+let data=await fetch(`http://localhost:3000/students/${inp}`,{
+    method:'DELETE'
+}) 
+    }
+
+        // it is used replace the content
+    async function putdata(){
+        let obj={
+            course:'js'
+        }
+let inp=prompt('enter id')
+let data=await fetch(`http://localhost:3000/students/${inp}`,{
+        method:'PUT',
+        headers: {
+                'Content-type':'application/json'
+            },
+        body:JSON.stringify(obj)
+    })
+    }
+
+
+
+
+        //how to post data
+        async function postdata(){
+          let  obj={ name:'john',
+                city:'hyd'}
+ let data =await fetch('http://localhost:3000/students',{
+                method:'POST',
+                headers: {
+                    'Content-type':'application/json'
+                },
+                body:JSON.stringify(obj)
+            })
+        }
+
+        // <!-- how to getdata -->
+    async function getapidata(){
+        let data=await fetch("http://localhost:3000/students");
+        let res=await data.json();
+        console.log(res);
+    }
+    
+        /*
+
+open power shell with admin rights
+ Get-ExecutionPolicy
+ Set-ExecutionPolicy RemoteSigned
+
+json server
+1) install node js
+2) node -v
+   npm -v
+3) select a folder -open terminal
+4) npm init -y
+5) npm install -g json-server@0
+6) json-server --watch db.json
+7) clear db.json --update ur own data structure
+{'products':[
+    { "id": 1, "name": "john",  "marks": 90 }
+            ]
+}
+8) fetch data from http://localhost:3000/products
+  
+
+
+
+        
+
+
+
+
+        
+        {
+            "students": [
+                { "id": 1, "name": "Teja", "course": "Python", "marks": 90 },
+                { "id": 2, "name": "Ravi", "course": "JavaScript", "marks": 85 },
+                { "id": 3, "name": "Kiran", "course": "React", "marks": 88 },
+                { "id": 4, "name": "Pooja", "course": "Django", "marks": 92 },
+                { "id": 5, "name": "Anil", "course": "Java", "marks": 78 },
+                { "id": 6, "name": "Manoj", "course": "NodeJS", "marks": 81 },
+                { "id": 7, "name": "Sita", "course": "Python", "marks": 95 },
+                { "id": 8, "name": "Rahul", "course": "React", "marks": 89 },
+                { "id": 9, "name": "Hari", "course": "JavaScript", "marks": 76 },
+                { "id": 10, "name": "Deepak", "course": "Django", "marks": 84 }
+            ],
+            
+            "courses": [
+                { "id": 1, "title": "Python Full Stack", "duration": "3 Months" },
+                { "id": 2, "title": "JavaScript Zero to Hero", "duration": "2 Months" },
+                { "id": 3, "title": "React Frontend", "duration": "2 Months" },
+                { "id": 4, "title": "Django Backend", "duration": "3 Months" },
+                { "id": 5, "title": "NodeJS Advanced", "duration": "1.5 Months" }
+            ]
+        }
+        */
+    </script>
+    
+</body>
+</html>
