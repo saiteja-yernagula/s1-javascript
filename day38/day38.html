@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="console.log(this)">clikc</button>
+     -->
+
+     <div id="outer">
+        <div id="inner">
+            <button>click me</button>
+        </div>
+     </div>
+    <script>
+        // event bubblying
+    let parent=document.querySelector('#outer')
+    parent.addEventListener('click',()=>{
+        console.log('outer')
+    })
+    let child=document.querySelector('#inner')
+    child.addEventListener('click',()=>{
+        console.log('inner')
+    })
+
+
+    //how to stop event bubbling
+    // let child=document.querySelector('#inner')
+    // child.addEventListener('click',(e)=>{
+    //     e.stopPropagation()
+    //     console.log('inner')
+    // })
+
+    //capturing
+    let parent=document.querySelector('#outer')
+    parent.addEventListener('click',()=>{
+        console.log('outer')
+    },true)
+
+
+
+    
+    let child=document.querySelector('#inner')
+    child.addEventListener('click',()=>{
+        console.log('inner')
+    })
+        /*
+        error handling methods
+
+
+        try
+        
+        
+        
+        try{
+            inp=prompt('enter a number')
+            if (inp==null){
+                throw new Error('must enter a value')
+            }
+        }
+        catch(err){
+            console.log(err)
+        }
+
+        this keyword - it is used to represent the
+        current calling object
+        
+        console.log(this)//window
+        
+        function greet(){
+        console.log(this)//window
+        }
+        greet()
+        
+        let obj={
+            stdname:'john',
+            age:20,
+            details:function(){
+                console.log(this)//obj
+                console.log(this.stdname)//john
+            },
+            details2:()=>{
+                console.log(this)//window
+                console.log(this.stdname)//undefined
+            }
+        }
+        obj.details2()
+        */ 
+
+//<button onclick="console.log(this)">click</button> return the element
+
+//call apply bind is used to manipulate the this keyword
+// function greet(city,role){
+//     console.log(this.name,city ,role)
+// }
+// let obj={
+//     name:'john'
+// }
+// greet()//window
+// greet.call(obj,'hyd','developer')//object
+// greet.apply(obj,['hyd','developer'])//object
+// a =greet.bind(obj,'hyd','developer')//object
+// a()
+
+
+
+
+
+    </script>
+</body>
+</html>
