@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        `this - call , apply and bind
+         try catch 
+         event bubblying and capturing
+
+
+
+         oops - object oriented programming structure
+         it is way of a writing a code in more modular
+         and reusable manner
+
+    class- class is used to define template of an object
+          class have states (properties ) and methods(behaviour)
+
+        syntax
+        class Classname{
+        property1
+        property2
+        property3
+
+        constructor(param1 ,param2 ,param3){
+             //it is used to intialize the properties
+             //it invokes immediately when object is created
+        this.property1=param1
+        this.property2=param2
+        this.property3=param3
+               }
+
+        details(){
+        console.log(this.property1,this.property2)
+        }
+
+        }
+        //instance of class
+        let obj=new Classname('val1','val2','val3')
+        */
+
+        class Marker{
+            type;
+            color;
+            lid;
+            constructor(para1,para2,para3){
+                this.type=para1
+                this.color=para2
+                this.lid=para3
+            }
+            write(){
+console.log('iam writing with '+ this.type +' and the color is '+ this.color)
+            }
+        }
+
+        let obj=new Marker('permanent','black', 'squared')
+        console.log(obj)
+        obj.write()
+
+        let obj2=new Marker('temporary','red', 'circle')
+        console.log(obj2)
+
+        obj2.write()
+    </script>
+    
+</body>
+</html>
