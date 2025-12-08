@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+
+        oops
+        class 
+        object
+
+        inheritance
+        polymorphism
+        abstraction
+        
+        encapsulation
+      it is used to hide the properties in a class
+      and showing necessary information using getters
+      and setters
+      class Employe{
+        name
+            role
+            #salary //private fields - which is used to hide
+              //the property - we can access within the class
+              
+              constructor(name,role,salary){
+                this.name=name
+                this.role=role
+                this.#salary=salary
+            }
+            
+            get getsal(){
+                return this.#salary
+            }
+
+            set setsal(sal){
+                this.#salary=sal
+            }
+        }
+        
+        let person1=new Employe('john', 'trainer', '1000000')
+        console.log(person1.salary)//undefined due to private field
+        person1.setsal=5000000
+        console.log(person1.getsal)//100000- using getters
+        
+        
+        inheritance
+        it is used to get the properties and methods
+        from parent class to child class
+        */
+       class Animal{
+        weight
+        height
+
+        constructor(weight,height){
+            this.weight=weight
+            this.height=height
+        }
+
+        details(){
+            console.log(this.height ,' and ', this.weight)
+        }
+       }
+
+       let obj=new Animal('100kgs', '7feet')
+       console.log(obj)//returns based on a parent
+       obj.details()//execute parent method
+
+       class Dog extends Animal{
+        breed
+        purpose
+        constructor(weight,height,breed,purpose){
+ super(weight,height)//used to invoke the parent constructor
+        this.breed=breed
+        this.purpose=purpose
+        }
+
+        details(){
+            console.log(this.breed , 'having a weight of', this.weight ,'and height of',this.height )
+        }
+       }
+
+       let dog1=new Dog('10kgs','2feet','pumerian','playfull')
+       console.log(dog1)
+       dog1.details()
+    /*
+    polymorphism
+    it allows us to define the same method in different
+    classes that behaves differently based on the 
+    object we are called on
+
+    class Animal{
+        details(){
+            console.log(this.height ,' and ', this.weight)
+        }
+       }
+       
+    class Dog extends Animal{
+        details(){
+            console.log(this.breed , 'having a weight of', this.weight ,'and height of',this.height )
+            }
+      }
+            
+     let obj=new Animal('100kgs', '7feet')
+     obj.details()//executes parent method
+
+     let dog1=new Dog('10kgs','2feet','pumerian','playfull')
+     dog1.details()//executes child method
+
+     Abstraction
+     it is process of hiding the complex implemention 
+     
+
+    */    
+        </script>
+    
+</body>
+</html>
