@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        import deo from './demo.js';
+        deo();
+
+        import {fun1,fun2 ,fun3} from './demo.js';
+        fun1();
+        fun2();
+        fun3();
+        /*
+        
+Modules :-
+modules are reusable pieces of code that encapsulate related functionality and can be exported from one file and imported into another. This allows for better organization, maintainability, and reusability of code
+
+types of modules
+
+default export
+export default function demo() {
+  console.log("default export -This is a demo function from day41/demo.js");
+}
+
+default import
+import deo from './demo.js';
+deo();
+
+
+// named export
+function fun1(){
+    console.log("named export - This is fun1 from day41/demo.js");
+}
+function fun2(){
+    console.log("named export - This is fun2 from day41/demo.js");
+}
+export {fun1, fun2};
+
+// named import
+import {fun1,fun2 } from './demo.js';
+fun1();
+fun2();
+
+
+
+
+
+
+        
+        */
+
+        // how to create a set
+        let arr=[1,1,2,2]
+        let data=new Set(arr)
+        data.add(3)
+        data.add(3)
+        data.add('john')
+        data.add('john')
+        data.delete('john')
+        console.log(data.has(3));// true
+        console.log(data.has(4));// false
+        data.clear()
+        console.log(data.size);// 3
+        console.log(data);
+        data.forEach((val)=>{
+            console.log(val);
+        })
+
+        console.log(data.keys())
+        console.log(data.values())
+        console.log(data.entries())
+
+
+    </script>
+    
+</body>
+</html>
